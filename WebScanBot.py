@@ -1,9 +1,27 @@
 ### Welcome To AlienBot Database ###
 import socket as s
+import re
+import subprocess
+import json
 import sys , urllib.request , os, time
 import sys
 import requests
+import pandas as pd
+import urllib
+import time
+import pyspeedtest
+import requests
+import urllib as urllib1
+import json
+import requests
+import pandas as pd
+import urllib
+import time
+#from google.colab import files#
+import io 
+import requests
 import socket
+import geocoder
 import whois
 from datetime import datetime
 import pyfiglet
@@ -295,14 +313,23 @@ if mainName == '                     Created by Kaveesha Anuhas':
     print(bcolors.MAIN+ascii_banner)
     print(bcolors.WARNING+mainName)
     print(bcolors.FAIL+"A Powerfull Website Scanner")
+    url = "http://www.kite.com"
+    timeout = 5
+    try:
+        request = requests.get(url, timeout=timeout)
+        print(bcolors.ENDC+"Connected to the Internet")
+    except (requests.ConnectionError, requests.Timeout) as exception:
+        print(bcolors.FAIL+"No internet connection.")
     print(bcolors.MAIN1+"Website Link --> "+webLink)
     print("  ")
     print("  ")
-    print(bcolors.WARNING+"1. Scan Web IP Address")
+    print(bcolors.WARNING+"1. Scan Web IP Address Status")
     print(bcolors.WARNING+"2. Scan Web TCP Open Ports")
     print(bcolors.WARNING+"3. Scan Web Admin Link")
     print(bcolors.WARNING+"4. Scan Web Subdomains")
     print(bcolors.WARNING+"5. Scan Web Domain Name of a Host")
+    print(bcolors.WARNING+"6. Ping Website")
+    print(bcolors.WARNING+"7. Scan Website And Analytics Full Data")
     print(" ")
     as2ga3 = input("WebScanBot@"+username+":>")
     if as2ga3 == "1. Scan Web Ip" or as2ga3 == "1." or as2ga3 == "1":
@@ -311,6 +338,7 @@ if mainName == '                     Created by Kaveesha Anuhas':
         print(bcolors.WARNING+mainName)
         print(bcolors.FAIL+"A Powerfull Website Scanner")
         ip = s.gethostbyname(webLink)
+        ipLoc = geocoder.ip(ip)
         print("  ")
         print(webLink+" Ip --> "+ip)
     elif as2ga3 == "3. Scan Web Admin Link" or as2ga3 == "3." or as2ga3 == "3":
@@ -406,6 +434,46 @@ if mainName == '                     Created by Kaveesha Anuhas':
         print(bcolors.WARNING+"WHOIS server:", whois_info.whois_server)
         print(bcolors.WARNING+"Domain creation date:", whois_info.creation_date)
         print(bcolors.WARNING+"Expiration date:", whois_info.expiration_date)
+
+    elif as2ga3 == "6. Ping Website" or as2ga3 == "6." or as2ga3 == "6":
+        clear()
+        ascii_banner = pyfiglet.figlet_format("Welcome To WebScanBot")
+        print(bcolors.MAIN+ascii_banner)
+        print(bcolors.WARNING+mainName)
+        print(bcolors.FAIL+"A Powerfull Website Scanner")
+        ip = s.gethostbyname(webLink)
+        print("  ")
+        print("-" * 50)
+        print(bcolors.FAIL+webLink+" IP Address --> "+ip)
+        print(bcolors.FAIL+"Scanning started at:" + str(datetime.now()))
+        print(bcolors.FAIL+"This will take some time")
+        print("-" * 50)
+        print(" ")
+        packet = int(input("\nEnter Packet: "))
+        print("\n")
+        ping = subprocess.getoutput(f"ping -w {packet} {webLink}")
+        print(bcolors.WARNING+ping)
+
+    elif as2ga3 == "7. Scan Website And Analytics Full Data" or as2ga3 == "7." or as2ga3 == "7":
+        clear()
+        ascii_banner = pyfiglet.figlet_format("Welcome To WebScanBot")
+        print(bcolors.MAIN+ascii_banner)
+        print(bcolors.WARNING+mainName)
+        print(bcolors.FAIL+"A Powerfull Website Scanner")
+        ip = s.gethostbyname(webLink)
+        print("  ")
+        print("-" * 50)
+        print(bcolors.FAIL+webLink+" IP Address --> "+ip)
+        print(bcolors.FAIL+"Scanning started at:" + str(datetime.now()))
+        print(bcolors.FAIL+"This will take some time")
+        print("-" * 50)
+        print(" ")
+        url = f"http://{webLink}.com"
+        result = urllib.request.urlopen('https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url={}/&strategy=mobile'\
+            .format(url)).read().decode('UTF-8')
+        print(result)
+        
+        
 
 
     else:
