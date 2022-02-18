@@ -330,6 +330,8 @@ if mainName == '                     Created by Kaveesha Anuhas':
     print(bcolors.WARNING+"5. Scan Web Domain Name of a Host")
     print(bcolors.WARNING+"6. Ping Website")
     print(bcolors.WARNING+"7. Scan Website And Analytics Full Data")
+    print(bcolors.WARNING+"8. Scan Website Host Server Location")
+
     print(" ")
     as2ga3 = input("WebScanBot@"+username+":>")
     if as2ga3 == "1. Scan Web Ip" or as2ga3 == "1." or as2ga3 == "1":
@@ -472,7 +474,18 @@ if mainName == '                     Created by Kaveesha Anuhas':
         result = urllib.request.urlopen('https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url={}/&strategy=mobile'\
             .format(url)).read().decode('UTF-8')
         print(result)
-        
+
+    elif as2ga3 == "8. Scan Website Host Server Location" or as2ga3 == "8." or as2ga3 == "8":
+        clear()
+        ascii_banner = pyfiglet.figlet_format("Welcome To WebScanBot")
+        print(bcolors.MAIN+ascii_banner)
+        print(bcolors.WARNING+mainName)
+        print(bcolors.FAIL+"A Powerfull Website Scanner")
+        ip = s.gethostbyname(webLink)
+        print("  ")
+        print("-" * 50)
+        response = requests.post("http://ip-api.com/json/"+ip).json()
+        print("Server IP --> "+ip+"\n"+" "+"\n"+"Server Location"+"\n"+"-------------------------"+"\n"+"📌Country --> "+response["country"]+"\n"+"📌CountryCode --> "+response["countryCode"]+"\n"+"📌Region --> "+response["region"]+"\n"+"📌RegionName --> "+response["regionName"]+"\n"+"📌City --> "+response["city"]+"\n"+"📌Zip --> "+response["zip"]+"\n"+"-------------------------"+"\n"+"📌Isp --> "+response["isp"]+"\n"+"📌Org --> "+response["org"]+"\n"+"📌As --> "+response["as"]+"\n"+"📌Latitude --> "+str(response["lat"])+"\n"+"📌Longtitude --> "+str(response["lon"]))
         
 
 
