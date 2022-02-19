@@ -1,14 +1,17 @@
 # WebScanBot - A Powerfull Website Scanner
 <!-- PROJECT SHIELDS -->
 
-##🥳WebscanBot V2.0 Updated!🥳
+🥳WebscanBot V2.0 Updated!🥳
 
-#New Features😍
+New Features😍
+```
 📌 1.Scan Website Host Server Location
 📌 2.Scan Website And Analytics Full Data
 📌 3.Fix Bugs
+```
 
-#All Features😎
+All Features😎
+```
 📌1. Scan Web IP Address Status
 📌2. Scan Web TCP Open Ports
 📌3. Scan Web Admin Link
@@ -17,6 +20,7 @@
 📌6. Ping Website
 📌7. Scan Website And Analytics Full Data
 📌8. Scan Website Host Server Location
+```
 
 ## Installation on Kali Linux
 
