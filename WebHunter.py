@@ -292,7 +292,7 @@ def clear():
         _ = system('clear')
 
 if mainName == '                     Created by Kaveesha Anuhas':
-    ascii_banner = pyfiglet.figlet_format("Welcome To WebScanBot")
+    ascii_banner = pyfiglet.figlet_format("Welcome To WebHunter")
     print(bcolors.MAIN+ascii_banner)
     print(bcolors.WARNING+mainName)
     print(bcolors.FAIL+"A Powerfull Website Scanner")
