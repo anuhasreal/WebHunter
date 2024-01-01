@@ -27,7 +27,7 @@ All Features😎
 ```
 apt-get install python3-pip
 git clone https://github.com/AnuhasRox/WebScanBot.git
-cd WebScanBot
+cd WebHunter
 python3 -m pip install -r requirements.txt
 python3 WebScanBot.py
 ```
