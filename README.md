@@ -26,17 +26,17 @@ All Features😎
 
 ```
 apt-get install python3-pip
-git clone https://github.com/AnuhasRox/WebScanBot.git
+git clone https://github.com/AnuhasRox/WebHunter.git
 cd WebHunter
 python3 -m pip install -r requirements.txt
-python3 WebScanBot.py
+python3 WebHunter.py
 ```
 
 ## Installation on Ubuntu 20.04
 
 ```
-sudo apt-get install git python3-pip
-git clone https://github.com/AnuhasRox/VirusBot.git
-cd WebScanBot
+apt-get install python3-pip
+git clone https://github.com/AnuhasRox/WebHunter.git
+cd WebHunter
 python3 -m pip install -r requirements.txt
-python3 WebScanBot.py
+python3 WebHunter.py
