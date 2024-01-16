@@ -1,42 +1,45 @@
-# WebScanBot - A Powerfull Website Scanner
-<!-- PROJECT SHIELDS -->
+# WebHunter - Powerfull websites scanning framework
 
-🥳WebscanBot V2.0 Updated!🥳
+You can scan any websites using WebHunter
 
-New Features😍
-```
-📌 1.Scan Website Host Server Location
-📌 2.Scan Website And Analytics Full Data
-📌 3.Fix Bugs
-```
+<img title="SIGIT" src="https://img.shields.io/badge/CODENAME%20-WebHunter-SCRIPT?colorA=grey&colorB=green&style=for-the-badge"> <img title="aw" src="https://img.shields.io/badge/VERSION%20-2.0-SCRIPT?colorA=grey&colorB=green&style=for-the-badge"> 
 
-All Features😎
-```
-📌1. Scan Web IP Address Status
-📌2. Scan Web TCP Open Ports
-📌3. Scan Web Admin Link
-📌4. Scan Web Subdomains
-📌5. Scan Web Domain Name of a Host
-📌6. Ping Website
-📌7. Scan Website And Analytics Full Data
-📌8. Scan Website Host Server Location
-```
 
-## Installation on Kali Linux
 
-```
-apt-get install python3-pip
-git clone https://github.com/AnuhasRox/WebHunter.git
-cd WebHunter
-python3 -m pip install -r requirements.txt
-python3 WebHunter.py
-```
+### Features
+User can hack bluetooth device:
+- ```TCP_open_ports``` - Scan open ports
+- ```Admin_page``` - Scan admin page url
+- ```Subdomains``` - Scan subdomains
+- ```Server_details``` - Scan server details
+- ```Full_infomation``` - Scan full infomation
 
-## Installation on Ubuntu 20.04
+
+
+## Installation 
+[![Build](https://img.shields.io/badge/Supported_OS-Linux-orange.svg)]()
+[![Available](https://img.shields.io/badge/Available-BlackArch-red.svg?maxAge=259200)]()
+[![Available](https://img.shields.io/badge/Available-KaliLinux-red.svg?maxAge=259200)]()
+[![Available](https://img.shields.io/badge/Available-Ubuntu-red.svg?maxAge=259200)]()
+[![Available](https://img.shields.io/badge/Available-ParrotOs-red.svg?maxAge=259200)]()
+### on Kali Linux
 
 ```
 apt-get install python3-pip
 git clone https://github.com/AnuhasRox/WebHunter.git
 cd WebHunter
 python3 -m pip install -r requirements.txt
+python3 Install.py
 python3 WebHunter.py
+```
+### on Ubuntu 20.04
+
+```
+sudo apt-get install git python3-pip
+git clone https://github.com/AnuhasRox/WebHunter.git
+cd WebHunter
+python3 -m pip install -r requirements.txt
+python3 Install.py
+python3 WebHunter.py
+
+```
